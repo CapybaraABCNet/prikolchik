@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Взломано!</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 50px;
+            animation: flicker 1s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <h1>ВЫ ВЗЛОМАНЫ</h1>
+  <div class="message">
+    <p>Вы взломаны, о если переведёте деньги на номер +7 228 422 то мы вас разблокируем</p>
+    
+  </div>
+  
+  <audio src='zvuk-sirenyi-presleduyuschey-politseyskoy-mashinyi.mp3' autoplay loop></audio>
+  
+  <script>
+      // Попробуем начать воспроизведение звука при взаимодействии пользователя
+      document.addEventListener('click', function() {
+          const audio = document.querySelector('audio');
+          if (audio.paused) {
+              audio.play();
+          }
+      });
+  </script>
+</body>
+</html>
